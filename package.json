@@ -1,0 +1,28 @@
+{
+  "name": "angularjs-starter",
+  "version": "1.0.0",
+  "description": "AngularJS starter",
+  "main": "src/app.js",
+  "scripts": {
+    "build-js": "browserify src/app.js -o assets/js/bundle.js -t babelify -g uglifyify",
+    "watch-js": "watchify src/app.js -o assets/js/bundle.js -t babelify -g uglifyify",
+    "server": "lr-http-server",
+    "start": "npm run watch-js & npm run server"
+  },
+  "keywords": [
+    "angularjs",
+    "javascript",
+    "ECMAScript 6"
+  ],
+  "author": "Szymon Grzelak",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.5"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "lr-http-server": "^0.1.5",
+    "uglifyify": "^4.0.2"
+  }
+}
